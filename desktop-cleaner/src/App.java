@@ -1,5 +1,3 @@
-package desktopCleaner;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,7 +6,7 @@ import java.nio.file.Paths;
 
 
 
-public class Main {
+public class App {
 
 	public static void main(String[] args) {
 		Path destinationFolder;
