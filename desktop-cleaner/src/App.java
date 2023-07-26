@@ -12,6 +12,8 @@ public class App {
 		Path destinationFolder;
 		
 		// File Path of the Desktop
+
+		// change this path to your Path to the desktop
 		String directoryPath = "C:/Users/LucaS/Desktop";
 		
 		File directory = new File(directoryPath);
@@ -24,30 +26,30 @@ public class App {
 			
 			if(fileNamePrefix.length > 1) {
 				switch(fileNamePrefix[1]) {
-					case "txt": 
-						destinationFolder =  Paths.get(directoryPath.concat("/txt/") + f.getName());
-						moveFiles(Paths.get(f.getAbsolutePath()), destinationFolder);
-						break;
-						
-					case "html":
-					case "xhtml":
-					case "htm":
-						destinationFolder =  Paths.get(directoryPath.concat("/html/") + f.getName());
-						moveFiles(Paths.get(f.getAbsolutePath()), destinationFolder);
-						break;
+				case "txt": 
+					destinationFolder =  Paths.get(directoryPath.concat("/txt/") + f.getName());
+					moveFiles(Paths.get(f.getAbsolutePath()), destinationFolder);
+					break;
 					
-					case "pdf":
-						destinationFolder =  Paths.get(directoryPath.concat("/pdf/") + f.getName());
-						moveFiles(Paths.get(f.getAbsolutePath()), destinationFolder);
-						break;
-						
-					case "png":
-		            case "jpg":
-		            case "jpeg":
-		            case "svg":
-						destinationFolder =  Paths.get(directoryPath.concat("/foto/") + f.getName());
-						moveFiles(Paths.get(f.getAbsolutePath()), destinationFolder);
-						break;
+				case "html":
+				case "xhtml":
+				case "htm":
+					destinationFolder =  Paths.get(directoryPath.concat("/html/") + f.getName());
+					moveFiles(Paths.get(f.getAbsolutePath()), destinationFolder);
+					break;
+				
+				case "pdf":
+					destinationFolder =  Paths.get(directoryPath.concat("/pdf/") + f.getName());
+					moveFiles(Paths.get(f.getAbsolutePath()), destinationFolder);
+					break;
+					
+				case "png":
+				case "jpg":
+				case "jpeg":
+				case "svg":
+					destinationFolder =  Paths.get(directoryPath.concat("/foto/") + f.getName());
+					moveFiles(Paths.get(f.getAbsolutePath()), destinationFolder);
+					break;
 						
 				}
 			}
@@ -61,9 +63,9 @@ public class App {
 			Files.move(filePath, destitinationPath);
 			
 			System.out.println("sorted");
-			}catch (IOException e) {
+		}catch (IOException e) {
 	            e.printStackTrace();
-        }
+	        }
 		
 	}
 
